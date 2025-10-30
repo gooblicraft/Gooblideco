@@ -1,0 +1,116 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "gooblideco:tindahan_fence2",
+			"menu_category": {
+				"category": "items"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"goobli:variant": [0,1]
+			}
+		},
+		"components": {
+			"minecraft:display_name": "Tindahan Fence 2%\n",
+			"minecraft:geometry": "geometry.tindahan_fence2_c",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tindahan_fence1",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8, 0, -8
+				],
+				"size": [
+					16, 16, 2
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					2
+				]
+			},
+			"minecraft:custom_components": [
+				"goobli:change2"
+			]
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('goobli:variant') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.tindahan_fence2_c"
+				}
+			},
+			{
+				"condition": "q.block_state('goobli:variant') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.tindahan_fence2_o"
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

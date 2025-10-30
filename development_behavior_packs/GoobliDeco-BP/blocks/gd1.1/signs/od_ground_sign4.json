@@ -1,0 +1,115 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "gooblideco:od_ground_sign4",
+			"menu_category": {
+				"category": "items"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"goobli:variant": [0,1,2]
+			}
+		},
+		"components": {
+			"minecraft:display_name": "Outdoor Ground Sign 4%\n",
+			"minecraft:geometry": "geometry.od_ground_sign1_m",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "outdoor_ground_sign4",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-7,
+					0,
+					-6
+				],
+				"size": [
+					14,
+					16,
+					13
+				]
+			},
+			"minecraft:custom_components": [
+				"goobli:rotate"
+			]
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('goobli:variant') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.od_ground_sign1_m"
+				}
+			},
+			{
+				"condition": "q.block_state('goobli:variant') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.od_ground_sign1_l"
+				}
+			},
+			{
+				"condition": "q.block_state('goobli:variant') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.od_ground_sign1_r"
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

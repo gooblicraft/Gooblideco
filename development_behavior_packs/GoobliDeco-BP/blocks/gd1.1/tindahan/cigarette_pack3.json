@@ -1,0 +1,344 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:cigarette_pack3",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:variant": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4, 
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('goobli:variant') == 0",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": true,
+                            "pack2_out": true,
+                            "pack3_out": true,
+                            "pack4_out": true,
+                            "pack_group1": false,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            4
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 1",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": true,
+                            "pack2_out": true,
+                            "pack3_out": true,
+                            "pack4_out": false,
+                            "pack_group1": false,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            4
+                        ],
+                        "size": [
+                            16,
+                            12,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 2",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": true,
+                            "pack2_out": true,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": false,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            4
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 3",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": true,
+                            "pack2_out": false,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": false,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            4
+                        ],
+                        "size": [
+                            16,
+                            4,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 4",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": false,
+                            "pack2_out": false,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": true,
+                            "pack_group2": true,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            7
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            1
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 5",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": false,
+                            "pack2_out": false,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": true,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            7
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            1
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 6",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": false,
+                            "pack2_out": false,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": true,
+                            "pack_group2": false,
+                            "pack_group3": true,
+                            "pack_group4": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            7
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            1
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 7",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cigarette_pack1",
+                        "bone_visibility": {
+                            "pack1_out": false,
+                            "pack2_out": false,
+                            "pack3_out": false,
+                            "pack4_out": false,
+                            "pack_group1": false,
+                            "pack_group2": false,
+                            "pack_group3": false,
+                            "pack_group4": true
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            7
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            1
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:cigarette_pack3": {},
+            "minecraft:display_name": "Cigarette Pack 3\n",
+            "minecraft:geometry": "geometry.cigarette_pack1",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cigarette_pack3",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "goobli:change8"
+            ]
+        }
+    }
+}

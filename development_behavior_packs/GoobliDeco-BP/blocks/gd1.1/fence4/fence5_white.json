@@ -1,0 +1,392 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:fence5_white",
+            "menu_category": {
+                "category": "construction"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "gd:north_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:east_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:south_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:west_neighbor": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (!q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))) || ((q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (!q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')))",
+                "components": {
+                    //Single
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": false,
+                            "left": false,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Left Horizontal
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": false,
+                            "left": true,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Middle horizontal
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": false,
+                            "left": true,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Right Horizontal
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": false,
+                            "left": false,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Top Vertical
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": false,
+                            "left": false,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Middle Vertical
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": true,
+                            "left": false,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Bottom Vertical
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": true,
+                            "left": false,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Bottom Left
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": true,
+                            "left": true,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //bottom middle
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": true,
+                            "left": true,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Bottom Right
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": false,
+                            "bottom": true,
+                            "left": false,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Left
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": true,
+                            "left": true,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Only
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": true,
+                            "left": true,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Right
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": true,
+                            "left": false,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Left
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": false,
+                            "left": true,
+                            "right": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Middle
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": false,
+                            "left": true,
+                            "right": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Right
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_fence5",
+                        "bone_visibility": {
+                            "main": true,
+                            "top": true,
+                            "bottom": false,
+                            "left": false,
+                            "right": true
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:gd_fence5_white": {},
+            "minecraft:display_name": "Fence 5 White%\n",
+            "minecraft:geometry": {
+                "identifier": "geometry.gd_fence5",
+                    "bone_visibility": {
+                        "main": true,
+                        "top": false,
+                        "bottom": false,
+                        "left": false,
+                        "right": false
+                    }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "fence5_white",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -2
+                ],
+                "size": [
+                    16,
+                    16,
+                    4
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -2
+                ],
+                "size": [
+                    16,
+                    16,
+                    4
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "gd:horizontal_full_connected",
+                "gd:horizontal_full_destroy"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1387 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:block": {
+    "description": {
+      "identifier": "tap:custom_stairs",
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:vertical_half"]
+        },
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      },
+      "states": {
+        "tap:type": [1,2,3,4,5]
+      }
+    },
+    "components": {
+      "minecraft:item_visual": {
+        // stair south (main)
+        "geometry": {
+          "identifier": "geometry.stair",
+          "bone_visibility": {
+            "bot_ne": true,
+            "bot_nw": true,
+            "bot_se": true,
+            "bot_sw": true,
+            "top_ne": true,
+            "top_nw": true  ,
+            "top_se": false,
+            "top_sw": false
+          }
+        },
+        "material_instances": {
+          "*": {
+            "texture": "dirt",
+            "render_method": "opaque"
+          }
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "dirt",
+          "render_method": "opaque",
+          "isotropic": false
+        }
+      },
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+      "tag:tap:stair": {},
+      "tag:stone": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          },
+          "tag:tap:bottom_half": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top'",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "tag:tap:top_half": {}
+        }
+      },
+      
+      //stair south (main)
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 1",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair north
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 2
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 3
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 3",
+        "components": {
+          "minecraft:geometry": {
+            // stair south west
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 4
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": false,
+              "top_se": false,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": false,
+              "top_se": false,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      //bot 5
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": false,
+              "top_se": false,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": false,
+              "top_se": true,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": false,
+              "top_se": false,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": false,
+              "top_nw": true,
+              "top_se": false,
+              "top_sw": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      
+      //top 1
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "north"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair down north
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "south"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair down west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair down east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+
+      //top 2
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair down south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair down north west 
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair down south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair down north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      
+      //top 3
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair down south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair down north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": true,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair down north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair down south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      
+      //top 4
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair down out south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair down out north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": false,
+              "bot_se": false,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair down out north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair down out north east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": false,
+              "bot_se": false,
+              "bot_sw": true,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      
+      //top 5
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 5",
+        "components": {
+          //stair down out south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": false,
+              "bot_se": false,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair down out north west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": false,
+              "bot_se": true,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair down south west
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": true,
+              "bot_nw": false,
+              "bot_se": false,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair down out south east
+          "minecraft:geometry": {
+            "identifier": "geometry.stair",
+            "bone_visibility": {
+              "bot_ne": false,
+              "bot_nw": true,
+              "bot_se": false,
+              "bot_sw": false,
+              "top_ne": true,
+              "top_nw": true,
+              "top_se": true,
+              "top_sw": true
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "up"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      }
+    ]
+  }
+}

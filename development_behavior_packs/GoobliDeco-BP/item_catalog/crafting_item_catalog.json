@@ -1,0 +1,744 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+    "categories": [
+        {
+            "category_name": "items",
+            "groups": [
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:table1_oak",
+                    "name": "gooblideco:itemGroup.name.gd_table1"
+                },
+                "items": [
+                    "gooblideco:table1_oak",
+                    "gooblideco:table1_spruce",
+                    "gooblideco:table1_birch",
+                    "gooblideco:table1_jungle",
+                    "gooblideco:table1_acacia",
+                    "gooblideco:table1_dark",
+                    "gooblideco:table1_mangrove",
+                    "gooblideco:table1_cherry",
+                    "gooblideco:table1_pale",
+                    "gooblideco:table1_bamboo",
+                    "gooblideco:table1_crimson",
+                    "gooblideco:table1_warped"
+                ]
+                },
+                {
+                    "group_identifier": {
+                        "icon": "gooblideco:lower_table1_oak",
+                        "name": "gooblideco:itemGroup.name.gd_lower_table1"
+                    },
+                    "items": [
+                        "gooblideco:lower_table1_oak",
+                        "gooblideco:lower_table1_spruce",
+                        "gooblideco:lower_table1_birch",
+                        "gooblideco:lower_table1_jungle",
+                        "gooblideco:lower_table1_acacia",
+                        "gooblideco:lower_table1_dark",
+                        "gooblideco:lower_table1_mangrove",
+                        "gooblideco:lower_table1_cherry",
+                        "gooblideco:lower_table1_pale",
+                        "gooblideco:lower_table1_bamboo",
+                        "gooblideco:lower_table1_crimson",
+                        "gooblideco:lower_table1_warped"
+                    ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:chair1_oak_white",
+                    "name": "gooblideco:itemGroup.name.gd_chair1"
+                },
+                "items": [
+                    "gooblideco:chair1_oak_black",
+                    "gooblideco:chair1_oak_blue",
+                    "gooblideco:chair1_oak_brown",
+                    "gooblideco:chair1_oak_cyan",
+                    "gooblideco:chair1_oak_gray",
+                    "gooblideco:chair1_oak_green",
+                    "gooblideco:chair1_oak_light_blue",
+                    "gooblideco:chair1_oak_light_gray",
+                    "gooblideco:chair1_oak_lime",
+                    "gooblideco:chair1_oak_magenta",
+                    "gooblideco:chair1_oak_orange",
+                    "gooblideco:chair1_oak_purple",
+                    "gooblideco:chair1_oak_pink",
+                    "gooblideco:chair1_oak_red",
+                    "gooblideco:chair1_oak_white",
+                    "gooblideco:chair1_oak_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:chair2_dark",
+                    "name": "gooblideco:itemGroup.name.gd_chair2"
+                },
+                "items": [
+                    "gooblideco:chair2_acacia",
+                    "gooblideco:chair2_bamboo",
+                    "gooblideco:chair2_birch",
+                    "gooblideco:chair2_cherry",
+                    "gooblideco:chair2_crimson",
+                    "gooblideco:chair2_dark",
+                    "gooblideco:chair2_jungle",
+                    "gooblideco:chair2_mangrove",
+                    "gooblideco:chair2_oak",
+                    "gooblideco:chair2_pale",
+                    "gooblideco:chair2_spruce",
+                    "gooblideco:chair2_warped"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:chair3_white",
+                    "name": "gooblideco:itemGroup.name.gd_chair3"
+                },
+                "items": [
+                    "gooblideco:chair3_white",
+                    "gooblideco:chair3_black",
+                    "gooblideco:chair3_blue",
+                    "gooblideco:chair3_brown",
+                    "gooblideco:chair3_cyan",
+                    "gooblideco:chair3_gray",
+                    "gooblideco:chair3_green",
+                    "gooblideco:chair3_light_blue",
+                    "gooblideco:chair3_orange",
+                    "gooblideco:chair3_pink",
+                    "gooblideco:chair3_purple",
+                    "gooblideco:chair3_red",
+                    "gooblideco:chair3_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:goobli_bed1",
+                    "name": "gooblideco:itemGroup.name.gd_beds"
+                },
+                "items": [
+                    "gooblideco:goobli_bed1",
+                    "gooblideco:goobli_bed2",
+                    "gooblideco:goobli_bed3",
+                    "gooblideco:goobli_bed4",
+                    "gooblideco:goobli_bed5_left",
+                    "gooblideco:goobli_bed5_right",
+                    "gooblideco:goobli_bed6_left",
+                    "gooblideco:goobli_bed6_right",
+                    "gooblideco:goobli_bed7_left",
+                    "gooblideco:goobli_bed7_right",
+                    "gooblideco:goobli_bed8_left",
+                    "gooblideco:goobli_bed8_right"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:shelf_stand1_oak",
+                    "name": "gooblideco:itemGroup.name.standing_shelves1"
+                },
+                "items": [
+                    "gooblideco:shelf_stand1_oak",
+                    "gooblideco:shelf_stand1_birch",
+                    "gooblideco:shelf_stand1_acacia",
+                    "gooblideco:shelf_stand1_black"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:shelf_stand2_oak",
+                    "name": "gooblideco:itemGroup.name.standing_shelves2"
+                },
+                "items": [
+                    "gooblideco:shelf_stand2_oak",
+                    "gooblideco:shelf_stand2_birch",
+                    "gooblideco:shelf_stand2_acacia",
+                    "gooblideco:shelf_stand2_black"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:shelf_stand3_oak",
+                    "name": "gooblideco:itemGroup.name.standing_shelves3"
+                },
+                "items": [
+                    "gooblideco:shelf_stand3_oak",
+                    "gooblideco:shelf_stand3_birch",
+                    "gooblideco:shelf_stand3_acacia",
+                    "gooblideco:shelf_stand3_black"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:drawer1_oak",
+                    "name": "gooblideco:itemGroup.name.gd_drawers1"
+                },
+                "items": [
+                    "gooblideco:drawer1_oak",
+                    "gooblideco:drawer1_birch",
+                    "gooblideco:drawer1_acacia",
+                    "gooblideco:drawer1_black"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:drawer2_oak",
+                    "name": "gooblideco:itemGroup.name.gd_drawers2"
+                },
+                "items": [
+                    "gooblideco:drawer2_oak",
+                    "gooblideco:drawer2_birch",
+                    "gooblideco:drawer2_acacia",
+                    "gooblideco:drawer2_black"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_box1",
+                    "name": "gooblideco:itemGroup.name.gd_boxes"
+                },
+                "items": [
+                    "gooblideco:gd_box1",
+                    "gooblideco:gd_box1_open",
+                    "gooblideco:gd_box2",
+                    "gooblideco:gd_box2_open",
+                    "gooblideco:gd_box3"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:od_ground_sign1",
+                    "name": "gooblideco:itemGroup.name.od_ground_signs"
+                },
+                "items": [
+                    "gooblideco:od_ground_sign1",
+                    "gooblideco:od_ground_sign2",
+                    "gooblideco:od_ground_sign3",
+                    "gooblideco:od_ground_sign4"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:trashbin1_close",
+                    "name": "gooblideco:itemGroup.name.gd_trashbins"
+                },
+                "items": [
+                    "gooblideco:trashbin1_close",
+                    "gooblideco:trashbin1_open"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:tindahan_fence1",
+                    "name": "gooblideco:itemGroup.name.tindahan_fences"
+                },
+                "items": [
+                    "gooblideco:tindahan_fence1",
+                    "gooblideco:tindahan_fence2"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:basket_of_apples",
+                    "name": "gooblideco:itemGroup.name.basket_of_fruits"
+                },
+                "items": [
+                    "gooblideco:basket_of_apples",
+                    "gooblideco:basket_of_grapes",
+                    "gooblideco:basket_of_limes",
+                    "gooblideco:basket_of_oranges"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:hanging_paninda1",
+                    "name": "gooblideco:itemGroup.name.hanging_panindas"
+                },
+                "items": [
+                    "gooblideco:hanging_paninda1",
+                    "gooblideco:hanging_paninda2",
+                    "gooblideco:hanging_paninda3",
+                    "gooblideco:hanging_paninda4",
+                    "gooblideco:hanging_paninda5",
+                    "gooblideco:hanging_paninda6"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:kalat_paninda1",
+                    "name": "gooblideco:itemGroup.name.kalat_panindas"
+                },
+                "items": [
+                    "gooblideco:kalat_paninda1",
+                    "gooblideco:kalat_paninda2",
+                    "gooblideco:kalat_paninda3"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:cigarette_pack1",
+                    "name": "gooblideco:itemGroup.name.cigarette_packs"
+                },
+                "items": [
+                    "gooblideco:cigarette_pack1",
+                    "gooblideco:cigarette_pack2",
+                    "gooblideco:cigarette_pack3",
+                    "gooblideco:cigarette_pack4",
+                    "gooblideco:cigarette_mix_pack"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:blueprint1",
+                    "name": "gooblideco:itemGroup.name.blueprints"
+                },
+                "items": [
+                    "gooblideco:blueprint1",
+                    "gooblideco:blueprint2",
+                    "gooblideco:blueprint_piled",
+                    "gooblideco:blueprint_rolled"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_book1",
+                    "name": "gooblideco:itemGroup.name.gd_books"
+                },
+                "items": [
+                    "gooblideco:gd_book1",
+                    "gooblideco:gd_book2"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:potted_plant2",
+                    "name": "gooblideco:itemGroup.name.potted_plants"
+                },
+                "items": [
+                    "gooblideco:potted_plant2",
+                    "gooblideco:potted_plant3",
+                    "gooblideco:potted_plant3_hanging",
+                    "gooblideco:potted_plant1_black",
+                    "gooblideco:potted_plant1_blue",
+                    "gooblideco:potted_plant1_green",
+                    "gooblideco:potted_plant1_red",
+                    "gooblideco:potted_plant1_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:wall_wood_cuttlery",
+                    "name": "gooblideco:itemGroup.name.gd_cuttleries"
+                },
+                "items": [
+                    "gooblideco:wall_wood_cuttlery",
+                    "gooblideco:wall_black_cuttlery",
+                    "gooblideco:cooking_pot1",
+                    "gooblideco:cooking_pot2",
+                    "gooblideco:gd_cup1",
+                    "gooblideco:wood_roller"
+                ]
+                }
+                ]
+            },
+        {
+            "category_name": "construction",
+            "groups": [
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:block2_brick1",
+                    "name": "gooblideco:itemGroup.name.block2_bricks"
+                },
+                "items": [
+                    "gooblideco:block2_brick1",
+                    "gooblideco:block2_brick2",
+                    "gooblideco:block2_brick3",
+                    "gooblideco:block2_brick4",
+                    "gooblideco:block2_brick5",
+                    "gooblideco:block2_brick6",
+                    "gooblideco:block2_brick7",
+                    "gooblideco:walkside_brick"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:block2_cobblestone1",
+                    "name": "gooblideco:itemGroup.name.block2_cobblestones"
+                },
+                "items": [
+                    "gooblideco:block2_cobblestone1",
+                    "gooblideco:block2_cobblestone2",
+                    "gooblideco:block2_cobblestone3",
+                    "gooblideco:block2_cobblestone4",
+                    "gooblideco:block2_cobblestone5",
+                    "gooblideco:block2_cobblestone6",
+                    "gooblideco:block2_cobblestone7"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:oak_wooden_glass1",
+                    "name": "gooblideco:itemGroup.name.gd_wooden_glass1"
+                },
+                "items": [
+                    "gooblideco:oak_wooden_glass1",
+                    "gooblideco:spruce_wooden_glass1",
+                    "gooblideco:birch_wooden_glass1",
+                    "gooblideco:jungle_wooden_glass1",
+                    "gooblideco:acacia_wooden_glass1",
+                    "gooblideco:dark_wooden_glass1",
+                    "gooblideco:mangrove_wooden_glass1",
+                    "gooblideco:cherry_wooden_glass1",
+                    "gooblideco:pale_wooden_glass1",
+                    "gooblideco:bamboo_wooden_glass1",
+                    "gooblideco:crimson_wooden_glass1",
+                    "gooblideco:warped_wooden_glass1"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_window1_black",
+                    "name": "gooblideco:itemGroup.name.gd_windows_1"
+                },
+                "items": [
+                    "gooblideco:gd_window1_black",
+                    "gooblideco:gd_window1_black_white",
+                    "gooblideco:gd_window1_blue",
+                    "gooblideco:gd_window1_gold",
+                    "gooblideco:gd_window1_green",
+                    "gooblideco:gd_window1_pink",
+                    "gooblideco:gd_window1_red",
+                    "gooblideco:gd_window1_white",
+                    "gooblideco:gd_window1_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_window2_white",
+                    "name": "gooblideco:itemGroup.name.gd_windows_2"
+                },
+                "items": [
+                    "gooblideco:gd_window2_black",
+                    "gooblideco:gd_window2_black_white",
+                    "gooblideco:gd_window2_blue",
+                    "gooblideco:gd_window2_gold",
+                    "gooblideco:gd_window2_green",
+                    "gooblideco:gd_window2_pink",
+                    "gooblideco:gd_window2_red",
+                    "gooblideco:gd_window2_white",
+                    "gooblideco:gd_window2_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_window3_green",
+                    "name": "gooblideco:itemGroup.name.gd_windows_3"
+                },
+                "items": [
+                    "gooblideco:gd_window3_green",
+                    "gooblideco:gd_window3_acacia",
+                    "gooblideco:gd_window3_black",
+                    "gooblideco:gd_window3_blue",
+                    "gooblideco:gd_window3_crimson",
+                    "gooblideco:gd_window3_dark",
+                    "gooblideco:gd_window3_iron",
+                    "gooblideco:gd_window3_jungle",
+                    "gooblideco:gd_window3_mangrove",
+                    "gooblideco:gd_window3_oak",
+                    "gooblideco:gd_window3_pink",
+                    "gooblideco:gd_window3_red",
+                    "gooblideco:gd_window3_spruce",
+                    "gooblideco:gd_window3_warped",
+                    "gooblideco:gd_window3_white",
+                    "gooblideco:gd_window3_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_window4_green",
+                    "name": "gooblideco:itemGroup.name.gd_windows_4"
+                },
+                "items": [
+                    "gooblideco:gd_window4_green",
+                    "gooblideco:gd_window4_acacia",
+                    "gooblideco:gd_window4_black",
+                    "gooblideco:gd_window4_blue",
+                    "gooblideco:gd_window4_crimson",
+                    "gooblideco:gd_window4_dark",
+                    "gooblideco:gd_window4_iron",
+                    "gooblideco:gd_window4_jungle",
+                    "gooblideco:gd_window4_mangrove",
+                    "gooblideco:gd_window4_oak",
+                    "gooblideco:gd_window4_pink",
+                    "gooblideco:gd_window4_red",
+                    "gooblideco:gd_window4_spruce",
+                    "gooblideco:gd_window4_warped",
+                    "gooblideco:gd_window4_white",
+                    "gooblideco:gd_window4_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:connected_block1_red_gd1",
+                    "name": "gooblideco:itemGroup.name.gd_connected_block1"
+                },
+                "items": [
+                    "gooblideco:connected_block1_black_gd1",
+                    "gooblideco:connected_block1_blue_gd1",
+                    "gooblideco:connected_block1_brown_gd1",
+                    "gooblideco:connected_block1_cyan_gd1",
+                    "gooblideco:connected_block1_gray_gd1",
+                    "gooblideco:connected_block1_green_gd1",
+                    "gooblideco:connected_block1_light_blue_gd1",
+                    "gooblideco:connected_block1_light_gray_gd1",
+                    "gooblideco:connected_block1_lime_gd1",
+                    "gooblideco:connected_block1_magenta_gd1",
+                    "gooblideco:connected_block1_orange_gd1",
+                    "gooblideco:connected_block1_purple_gd1",
+                    "gooblideco:connected_block1_pink_gd1",
+                    "gooblideco:connected_block1_red_gd1",
+                    "gooblideco:connected_block1_white_gd1",
+                    "gooblideco:connected_block1_yellow_gd1"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:connected_block2_red_gd1",
+                    "name": "gooblideco:itemGroup.name.gd_connected_block2"
+                },
+                "items": [
+                    "gooblideco:connected_block2_black_gd1",
+                    "gooblideco:connected_block2_blue_gd1",
+                    "gooblideco:connected_block2_brown_gd1",
+                    "gooblideco:connected_block2_cyan_gd1",
+                    "gooblideco:connected_block2_gray_gd1",
+                    "gooblideco:connected_block2_green_gd1",
+                    "gooblideco:connected_block2_light_blue_gd1",
+                    "gooblideco:connected_block2_silver_gd1",
+                    "gooblideco:connected_block2_lime_gd1",
+                    "gooblideco:connected_block2_magenta_gd1",
+                    "gooblideco:connected_block2_orange_gd1",
+                    "gooblideco:connected_block2_purple_gd1",
+                    "gooblideco:connected_block2_pink_gd1",
+                    "gooblideco:connected_block2_red_gd1",
+                    "gooblideco:connected_block2_white_gd1",
+                    "gooblideco:connected_block2_yellow_gd1"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:cb3_red",
+                    "name": "gooblideco:itemGroup.name.gd_connected_block3"
+                },
+                "items": [
+                    "gooblideco:cb3_black",
+                    "gooblideco:cb3_blue",
+                    "gooblideco:cb3_brown",
+                    "gooblideco:cb3_cyan",
+                    "gooblideco:cb3_gray",
+                    "gooblideco:cb3_green",
+                    "gooblideco:cb3_light_blue",
+                    "gooblideco:cb3_light_gray",
+                    "gooblideco:cb3_lime",
+                    "gooblideco:cb3_magenta",
+                    "gooblideco:cb3_orange",
+                    "gooblideco:cb3_purple",
+                    "gooblideco:cb3_pink",
+                    "gooblideco:cb3_red",
+                    "gooblideco:cb3_white",
+                    "gooblideco:cb3_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:block1_spruce_gd1",
+                    "name": "gooblideco:itemGroup.name.gd_block1"
+                },
+                "items": [
+                    "gooblideco:block1_acacia_gd1",
+                    "gooblideco:block1_bamboo_gd1",
+                    "gooblideco:block1_birch_gd1",
+                    "gooblideco:block1_cherry_gd1",
+                    "gooblideco:block1_crimson_gd1",
+                    "gooblideco:block1_dark_gd1",
+                    "gooblideco:block1_jungle_gd1",
+                    "gooblideco:block1_mangrove_gd1",
+                    "gooblideco:block1_oak_gd1",
+                    "gooblideco:block1_pale_gd1",
+                    "gooblideco:block1_spruce_gd1",
+                    "gooblideco:block1_warped_gd1"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:red_roof",
+                    "name": "gooblideco:itemGroup.name.gd_roofs"
+                },
+                "items": [
+                    "gooblideco:red_roof",
+                    "gooblideco:black_roof",
+                    "gooblideco:blue_roof",
+                    "gooblideco:brown_roof",
+                    "gooblideco:gray_roof",
+                    "gooblideco:green_roof",
+                    "gooblideco:hay_roof"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:red_roof_tip",
+                    "name": "gooblideco:itemGroup.name.roofs_tip"
+                },
+                "items": [
+                    "gooblideco:red_roof_tip",
+                    "gooblideco:black_roof_tip",
+                    "gooblideco:blue_roof_tip",
+                    "gooblideco:brown_roof_tip",
+                    "gooblideco:gray_roof_tip",
+                    "gooblideco:green_roof_tip",
+                    "gooblideco:hay_roof_tip"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:red_roof_line",
+                    "name": "gooblideco:itemGroup.name.roofs_line"
+                },
+                "items": [
+                    "gooblideco:red_roof_line",
+                    "gooblideco:black_roof_line",
+                    "gooblideco:blue_roof_line",
+                    "gooblideco:brown_roof_line",
+                    "gooblideco:gray_roof_line",
+                    "gooblideco:green_roof_line",
+                    "gooblideco:hay_roof_line"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:fence4_iron",
+                    "name": "gooblideco:itemGroup.name.gd_fences"
+                },
+                "items": [
+                    "gooblideco:fence4_iron",
+                    "gooblideco:gd_fence2_black",
+                    "gooblideco:gd_fence2_gold",
+                    "gooblideco:gd_fence2_green",
+                    "gooblideco:gd_fence2_red",
+                    "gooblideco:gd_fence2_white",
+
+                    "gooblideco:gd_fence3_black",
+                    "gooblideco:gd_fence3_gold",
+                    "gooblideco:gd_fence3_green",
+                    "gooblideco:gd_fence3_red",
+                    "gooblideco:gd_fence3_white",
+
+                    "gooblideco:fence5_black",
+                    "gooblideco:fence5_white",
+
+                    "gooblideco:fence6_white",
+                    "gooblideco:fence6_wood1",
+                    "gooblideco:fence6_wood2"
+                    
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:red_awning",
+                    "name": "gooblideco:itemGroup.name.gd_awnings"
+                },
+                "items": [
+                    "gooblideco:red_awning",
+                    "gooblideco:black_awning",
+                    "gooblideco:blue_awning",
+                    "gooblideco:brown_awning",
+                    "gooblideco:cyan_awning",
+                    "gooblideco:gray_awning",
+                    "gooblideco:green_awning",
+                    "gooblideco:light_blue_awning",
+                    "gooblideco:lime_awning",
+                    "gooblideco:magenta_awning",
+                    "gooblideco:orange_awning",
+                    "gooblideco:pink_awning",
+                    "gooblideco:purple_awning",
+                    "gooblideco:yellow_awning"
+                    
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_door1_black",
+                    "name": "gooblideco:itemGroup.name.gd_doors1"
+                },
+                "items": [
+                    "gooblideco:gd_door1_black",
+                    "gooblideco:gd_door1_blue",
+                    "gooblideco:gd_door1_green",
+                    "gooblideco:gd_door1_oak",
+                    "gooblideco:gd_door1_pink",
+                    "gooblideco:gd_door1_red",
+                    "gooblideco:gd_door1_white",
+                    "gooblideco:gd_door1_yellow"
+                    
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:gd_door2_black",
+                    "name": "gooblideco:itemGroup.name.gd_doors2"
+                },
+                "items": [
+                    "gooblideco:gd_door2_black",
+                    "gooblideco:gd_door2_blue",
+                    "gooblideco:gd_door2_green",
+                    "gooblideco:gd_door2_oak",
+                    "gooblideco:gd_door2_pink",
+                    "gooblideco:gd_door2_red",
+                    "gooblideco:gd_door2_white",
+                    "gooblideco:gd_door2_yellow"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:railing_window1_wood",
+                    "name": "gooblideco:itemGroup.name.railing_windows1"
+                },
+                "items": [
+                    "gooblideco:railing_window1_wood",
+                    "gooblideco:railing_window1_black",
+                    "gooblideco:railing_window1_white",
+                    "gooblideco:railing_window1_gray"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:railing_stair1_wood",
+                    "name": "gooblideco:itemGroup.name.railing_stairs1"
+                },
+                "items": [
+                    "gooblideco:railing_stair1_wood",
+                    "gooblideco:railing_stair1_black",
+                    "gooblideco:railing_stair1_white",
+                    "gooblideco:railing_stair1_gray"
+                ]
+                },
+                {
+                "group_identifier": {
+                    "icon": "gooblideco:w_frame1_acacia",
+                    "name": "gooblideco:itemGroup.name.window_frames1"
+                },
+                "items": [
+                    "gooblideco:w_frame1_acacia",
+                    "gooblideco:w_frame1_birch",
+                    "gooblideco:w_frame1_blue",
+                    "gooblideco:w_frame1_dark",
+                    "gooblideco:w_frame1_green",
+                    "gooblideco:w_frame1_oak",
+                    "gooblideco:w_frame1_red",
+                    "gooblideco:w_frame1_spruce",
+                    "gooblideco:w_frame1_yellow"
+                ]
+                }
+                ]
+            }
+        ]
+    }
+}

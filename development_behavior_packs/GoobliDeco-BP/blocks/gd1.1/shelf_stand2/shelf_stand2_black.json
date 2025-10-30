@@ -1,0 +1,587 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:shelf_stand2_black",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "gd:north_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:east_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:south_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:west_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:top": [
+                    0,
+                    1
+                ],
+                "gd:bottom": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (!q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))) || ((q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (!q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')))",
+                "components": {
+                    //single
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //leftH
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": true,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //middleH
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": true,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //rightH
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": true,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:top') && !q.block_state('gd:bottom')))",
+                "components": {
+                    //bottomV
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": true,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:top') && q.block_state('gd:bottom')))",
+                "components": {
+                    //middleV
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": true,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:top') && q.block_state('gd:bottom')))",
+                "components": {
+                    //topV
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": true,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')))",
+                "components": {
+                    //bottomLeft
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": true,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:top'))",
+                "components": {
+                    //bottom
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": true,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top'))",
+                "components": {
+                    //bottomRight
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": true,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //leftM
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": true,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //middle
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": true,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //rightM
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": true,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //topLeft
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": true,
+                            "top_mid": false,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //top
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": true,
+                            "top_right": false,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //topRight
+                    "minecraft:geometry": {
+                        "identifier": "geometry.shelf_stand2",
+                        "bone_visibility": {
+                            "top_left": false,
+                            "top_mid": false,
+                            "top_right": true,
+                            "mid_left": false,
+                            "mid": false,
+                            "mid_right": false,
+                            "bot_left": false,
+                            "bot_mid": false,
+                            "bot_right": false,
+                            "v_top": false,
+                            "v_mid": false,
+                            "v_bot": false,
+                            "h_left": false,
+                            "h_mid": false,
+                            "h_right": false,
+                            "single": false
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:shelf_stand2_black": {},
+            "minecraft:display_name": "Standing Shelf 2 Black%\n",
+            "minecraft:geometry": {
+                "identifier": "geometry.shelf_stand2",
+                    "bone_visibility": {
+                        "top_left": false,
+                        "top_mid": false,
+                        "top_right": false,
+                        "mid_left": false,
+                        "mid": false,
+                        "mid_right": false,
+                        "bot_left": false,
+                        "bot_mid": false,
+                        "bot_right": false,
+                        "v_top": false,
+                        "v_mid": false,
+                        "v_bot": false,
+                        "h_left": false,
+                        "h_mid": false,
+                        "h_right": false,
+                        "single": true
+                    }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wood_black",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "gd:vertical_full_connected",
+                "gd:vertical_full_destroy"
+            ]
+        }
+    }
+}

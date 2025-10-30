@@ -1,0 +1,248 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:lower_table1_bamboo",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.gd_lower_table1"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "gd:north_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:east_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:south_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:west_neighbor": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (!q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))) || ((q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (!q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')))",
+                "components": {
+                    //Single
+                    "minecraft:geometry": "geometry.goobli_lower_table1_s"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Left Horizontal
+                    "minecraft:geometry": "geometry.goobli_lower_table1_lh"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Middle horizontal
+                    "minecraft:geometry": "geometry.goobli_lower_table1_mh"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Right Horizontal
+                    "minecraft:geometry": "geometry.goobli_lower_table1_rh"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Top Vertical
+                    "minecraft:geometry": "geometry.goobli_lower_table1_tv"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Middle Vertical
+                    "minecraft:geometry": "geometry.goobli_lower_table1_mv"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))",
+                "components": {
+                    //Bottom Vertical
+                    "minecraft:geometry": "geometry.goobli_lower_table1_bv"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //Bottom Left
+                    "minecraft:geometry": "geometry.goobli_lower_table1_bl"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //bottom middle
+                    "minecraft:geometry": "geometry.goobli_lower_table1_bm"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Bottom Right
+                    "minecraft:geometry": "geometry.goobli_lower_table1_br"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Left
+                    "minecraft:geometry": "geometry.goobli_lower_table1_ml"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Only
+                    "minecraft:geometry": "geometry.goobli_lower_table1_m"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Middle Right
+                    "minecraft:geometry": "geometry.goobli_lower_table1_mr"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Left
+                    "minecraft:geometry": "geometry.goobli_lower_table1_tl"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Middle
+                    "minecraft:geometry": "geometry.goobli_lower_table1_m"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:north_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:south_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:west_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:east_neighbor') && q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:east_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:west_neighbor') && q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //Top Right
+                    "minecraft:geometry": "geometry.goobli_lower_table1_tr"
+                }
+            }
+        ],
+        "components": {
+            "tag:gd_lower_table1_bamboo": {},
+            "minecraft:display_name": "Lower Table 1 bamboo",
+            "minecraft:geometry": "geometry.goobli_lower_table1_s",
+            "minecraft:material_instances": {
+                "wood_top": {
+                    "texture": "bamboo_top",
+                    "render_method": "alpha_test"
+                },
+                "wood_base": {
+                    "texture": "bamboo_table1",
+                    "render_method": "alpha_test"
+                },
+                "*": {
+                    "texture": "bamboo_table1",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    8,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    8,
+                    16
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "gd:horizontal_full_connected",
+                "gd:horizontal_full_destroy"
+            ]
+        }
+    }
+}

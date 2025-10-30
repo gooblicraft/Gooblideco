@@ -1,11 +1,15 @@
-# Ignore everything in this directory
+# Ignore everything by default
 *
 
-# Allow only these:
-!development_behavior_packs/
-!development_behavior_packs/Gooblideco-BP/**
-!development_resource_packs/
-!development_resource_packs/Gooblideco-RP/**
-
-# Allow the ignore file itself
+# Allow this file
 !.gitignore
+
+# Allow resource packs folder, and specifically GoobliDeco-RP
+!development_resource_packs/
+!development_resource_packs/GoobliDeco-RP/**
+!development_resource_packs/GoobliDeco-RP/
+
+# Allow behavior packs folder, and specifically GoobliDeco-BP
+!development_behavior_packs/
+!development_behavior_packs/GoobliDeco-BP/**
+!development_behavior_packs/GoobliDeco-BP/

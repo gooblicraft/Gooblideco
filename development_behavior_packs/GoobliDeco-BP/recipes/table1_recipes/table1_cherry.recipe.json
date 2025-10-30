@@ -1,0 +1,20 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "gooblideco:table1_cherry"
+        },
+        "tags": [
+            "stonecutter"
+        ],
+        "ingredients": [
+            {
+                "item": "minecraft:cherry_planks"
+            }
+        ],
+        "result": {
+            "item": "gooblideco:table1_cherry",
+            "count": 1
+        }
+    }
+}

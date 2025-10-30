@@ -1,0 +1,466 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:bamboo_wooden_glass1",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.wooden_glass1"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "gd:north_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:east_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:south_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:west_neighbor": [
+                    0,
+                    1
+                ],
+                "gd:top": [
+                    0,
+                    1
+                ],
+                "gd:bottom": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (!q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor'))) || ((q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (!q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')))",
+                "components": {
+                    //single
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_s"
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor'))",
+                "components": {
+                    //leftH
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_lh",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_lh",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //middleH
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_mh",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_mh",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor'))",
+                "components": {
+                    //rightH
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_rh",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_rh",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:top') && !q.block_state('gd:bottom')))",
+                "components": {
+                    //bottomV
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_bv",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_rh", // can be bottom_vertical
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:top') && q.block_state('gd:bottom')))",
+                "components": {
+                    //middleV
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_mv",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_mh", // can be middle_vertical
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:top') && q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('gd:top') && q.block_state('gd:bottom')))",
+                "components": {
+                    //topV
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_tv",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_lh", // can be top_vertical
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:top') && !q.block_state('gd:bottom')))",
+                "components": {
+                    //bottomLeft
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_bl",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_bl",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:top'))",
+                "components": {
+                    //bottom
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_b",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_b",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && q.block_state('gd:top') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top'))",
+                "components": {
+                    //bottomRight
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_br",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_br",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //leftM
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_lm",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_lm",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //middle
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_m",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_m",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //rightM
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_rm",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_rm",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //topLeft
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_tl",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_tl",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'south') && (q.block_state('gd:east_neighbor') && q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('gd:top') && q.block_state('gd:bottom') || q.block_state('minecraft:cardinal_direction') == 'east') && (q.block_state('gd:north_neighbor') && q.block_state('gd:south_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //top
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_t",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_t",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('gd:west_neighbor') && !q.block_state('gd:east_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('gd:east_neighbor') && !q.block_state('gd:west_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('gd:south_neighbor') && !q.block_state('gd:north_neighbor')) && !q.block_state('gd:top') && q.block_state('gd:bottom') || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('gd:north_neighbor') && !q.block_state('gd:south_neighbor') && !q.block_state('gd:top') && q.block_state('gd:bottom'))",
+                "components": {
+                    //topRight
+                    "minecraft:geometry": "geometry.gd_wooden_glass1_tr",
+                    "minecraft:material_instances": {
+                        "wood_frame": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "glass_frame": {
+                            "texture": "glass_tr",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "*": {
+                            "texture": "bamboo_glass1",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:gd_bamboo_wooden_glass1": {},
+            "minecraft:display_name": "Wooden Glass 1 bamboo",
+            "minecraft:geometry": "geometry.gd_wooden_glass1_s",
+            "minecraft:material_instances": {
+                "wood_frame": {
+                    "texture": "bamboo_glass1",
+                    "render_method": "alpha_test_single_sided"
+                },
+                "glass_frame": {
+                    "texture": "glass_s",
+                    "render_method": "alpha_test_single_sided"
+                },
+                "*": {
+                    "texture": "bamboo_glass1",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "gd:vertical_full_connected",
+                "gd:vertical_full_destroy"
+            ]
+        }
+    }
+}

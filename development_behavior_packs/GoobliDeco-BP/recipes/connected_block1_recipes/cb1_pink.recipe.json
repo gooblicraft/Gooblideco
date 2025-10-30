@@ -1,0 +1,20 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "gooblideco:connected_block1_pink_gd1"
+        },
+        "tags": [
+            "stonecutter"
+        ],
+        "ingredients": [
+            {
+                "item": "gooblideco:cb1_recipe_base_gd1"
+            }
+        ],
+        "result": {
+            "item": "gooblideco:connected_block1_pink_gd1",
+            "count": 1
+        }
+    }
+}

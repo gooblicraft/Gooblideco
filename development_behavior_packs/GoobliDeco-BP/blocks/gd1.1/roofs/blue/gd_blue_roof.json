@@ -1,0 +1,615 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:block": {
+    "description": {
+      "identifier": "gooblideco:blue_roof",
+      "menu_category": {
+        "category": "construction"       
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:vertical_half"]
+        },
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      },
+      "states": {
+        "tap:type": [1,2,3,4,5]
+      }
+    },
+    "components": {
+      "minecraft:display_name": "Blue Roof",
+      "minecraft:geometry": "geometry.gd_roof_south",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "gd_blue_roof0a",
+          "render_method": "alpha_test",
+          "isotropic": false
+        }
+      },
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+      "tag:tap:stair": {},
+      "tag:stone": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 16, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 16, 16]
+          },
+          "tag:tap:bottom_half": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'top'",
+        "components": {
+          "minecraft:collision_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 8, -8],
+            "size": [16, 8, 16]
+          },
+          "tag:tap:top_half": {}
+        }
+      },
+      
+      //stair south (main)
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.gd_roof_south",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof0a",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair north
+          "minecraft:geometry": "geometry.gd_roof_north",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof0a",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair west
+          "minecraft:geometry": "geometry.gd_roof_west",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof0a",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 1",
+        "components": {
+          // stair east
+          "minecraft:geometry": "geometry.gd_roof_east",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof0a",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 2
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair in south east
+          "minecraft:geometry": "geometry.gd_roof_corner_in_se",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair in north west
+          "minecraft:geometry": "geometry.gd_roof_corner_in_nw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair in south west
+          "minecraft:geometry": "geometry.gd_roof_corner_in_sw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 2",
+        "components": {
+          // stair north east
+          "minecraft:geometry": "geometry.gd_roof_corner_in_ne",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 3
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair in south west
+          "minecraft:geometry": "geometry.gd_roof_corner_in_sw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair in north east
+          "minecraft:geometry": "geometry.gd_roof_corner_in_ne",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair north west
+          "minecraft:geometry": "geometry.gd_roof_corner_in_nw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "south",
+                  "east"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 3",
+        "components": {
+          // stair south east
+          "minecraft:geometry": "geometry.gd_roof_corner_in_se",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_in",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down",
+                  "north",
+                  "west"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+
+      //bot 4
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out south east
+          "minecraft:geometry": "geometry.gd_roof_corner_out_se",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north east
+          "minecraft:geometry": "geometry.gd_roof_corner_out_ne",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north west
+          "minecraft:geometry": "geometry.gd_roof_corner_out_nw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 4",
+        "components": {
+          // stair out north east
+          "minecraft:geometry": "geometry.gd_roof_corner_out_ne",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      },
+      
+      //bot 5
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south west
+          "minecraft:geometry": "geometry.gd_roof_corner_out_sw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:north": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out north west
+          "minecraft:geometry": "geometry.gd_roof_corner_out_ne",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:south": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south west
+          "minecraft:geometry": "geometry.gd_roof_corner_out_sw",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:east": {}
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('tap:type') == 5",
+        "components": {
+          // stair out south east
+          "minecraft:geometry": "geometry.gd_roof_corner_out_se",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "gd_blue_roof_corner_out",
+              "render_method": "alpha_test",
+              "isotropic": false
+            }
+          },
+          "minecraft:liquid_detection": {
+            "detection_rules": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "stops_liquid_flowing_from_direction": [
+                  "down"
+                ]
+              }
+            ]
+          },
+          "tag:tap:west": {}
+        }
+      }
+    ]
+  }
+}

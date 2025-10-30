@@ -1,0 +1,233 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:kalat_paninda3",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:variant": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('goobli:variant') == 0",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.kalat_paninda1",
+                        "bone_visibility": {
+                            "chichirya1": true,
+                            "chichirya2": true,
+                            "chichirya3": true,
+                            "chichirya4": true,
+                            "chichirya5": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 1",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.kalat_paninda1",
+                        "bone_visibility": {
+                            "chichirya1": false,
+                            "chichirya2": true,
+                            "chichirya3": true,
+                            "chichirya4": true,
+                            "chichirya5": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 2",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.kalat_paninda1",
+                        "bone_visibility": {
+                            "chichirya1": false,
+                            "chichirya2": false,
+                            "chichirya3": true,
+                            "chichirya4": true,
+                            "chichirya5": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 3",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.kalat_paninda1",
+                        "bone_visibility": {
+                            "chichirya1": false,
+                            "chichirya2": false,
+                            "chichirya3": false,
+                            "chichirya4": true,
+                            "chichirya5": false
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 4",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.kalat_paninda1",
+                        "bone_visibility": {
+                            "chichirya1": false,
+                            "chichirya2": false,
+                            "chichirya3": false,
+                            "chichirya4": false,
+                            "chichirya5": true
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:kalat_paninda3": {},
+            "minecraft:display_name": "Kalat Paninda 3%\n",
+            "minecraft:geometry": "geometry.kalat_paninda1",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "hanging_paninda3",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "goobli:change5"
+            ]
+        }
+    }
+}

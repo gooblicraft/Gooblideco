@@ -1,0 +1,94 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:block": {
+    "description": {
+      "identifier": "gooblideco:connected_block1_black_gd1",
+      "menu_category": {
+        "category": "construction"
+      },
+      "states": {
+        "custom:up": [false, true],
+        "custom:down": [false, true],
+        "custom:north": [false, true],
+        "custom:east": [false, true],
+        "custom:south": [false, true],
+        "custom:west": [false, true],
+        "custom:north_east": [false, true],
+        "custom:east_south": [false, true],
+        "custom:south_west": [false, true],
+        "custom:west_north": [false, true]
+      }
+    },
+    "components": {
+      "minecraft:display_name": "Connected Block 1 black",
+      "minecraft:custom_components": [
+        "custom:connectedGlassComp"
+      ],
+      "minecraft:light_dampening": 0,
+      
+      // Textures
+      "minecraft:material_instances": {
+        "block": {
+          "texture": "cb1_black",
+          "render_method": "alpha_test"
+        },
+        "*": {
+          "texture": "cb1_white_frame",
+          "render_method": "alpha_test"
+        }
+      },
+      
+      // Geometry
+      "minecraft:geometry": {
+        "identifier": "geometry.connected_block1_gd1",
+        "bone_visibility": {
+// Block
+          "b_north": "!q.block_state('custom:north')",
+          "b_east": "!q.block_state('custom:east')",
+          "b_south": "!q.block_state('custom:south')",
+          "b_west": "!q.block_state('custom:west')",
+          "b_up": "!q.block_state('custom:up')",
+          "b_down": "!q.block_state('custom:down')",
+// North
+          "n_up": "!q.block_state('custom:up') && !q.block_state('custom:north')",
+          "n_down": "!q.block_state('custom:down') && !q.block_state('custom:north')",
+          "n_left": "!q.block_state('custom:west') && !q.block_state('custom:north')",
+          "n_right": "!q.block_state('custom:east') && !q.block_state('custom:north')",
+// East
+          "e_up": "!q.block_state('custom:up') && !q.block_state('custom:east')",
+          "e_down": "!q.block_state('custom:down') && !q.block_state('custom:east')",
+          "e_left": "!q.block_state('custom:north') && !q.block_state('custom:east')",
+          "e_right": "!q.block_state('custom:south') && !q.block_state('custom:east')",
+// South
+          "s_up": "!q.block_state('custom:up') && !q.block_state('custom:south')",
+          "s_down": "!q.block_state('custom:down') && !q.block_state('custom:south')",
+          "s_left": "!q.block_state('custom:east') && !q.block_state('custom:south')",
+          "s_right": "!q.block_state('custom:west') && !q.block_state('custom:south')",
+// West
+          "w_up": "!q.block_state('custom:up') && !q.block_state('custom:west')",
+          "w_down": "!q.block_state('custom:down') && !q.block_state('custom:west')",
+          "w_left": "!q.block_state('custom:south') && !q.block_state('custom:west')",
+          "w_right": "!q.block_state('custom:north') && !q.block_state('custom:west')",
+// Up
+          "u_up": "!q.block_state('custom:south') && !q.block_state('custom:up')",
+          "u_down": "!q.block_state('custom:north') && !q.block_state('custom:up')",
+          "u_left": "!q.block_state('custom:west') && !q.block_state('custom:up')",
+          "u_right": "!q.block_state('custom:east') && !q.block_state('custom:up')",
+          "u_up_right": "(!q.block_state('custom:east') || !q.block_state('custom:south') || !q.block_state('custom:east_south')) && !q.block_state('custom:up')",
+          "u_up_left": "(!q.block_state('custom:west') || !q.block_state('custom:south') || !q.block_state('custom:south_west')) && !q.block_state('custom:up')",
+          "u_down_right": "(!q.block_state('custom:east') || !q.block_state('custom:north') || !q.block_state('custom:north_east')) && !q.block_state('custom:up')",
+          "u_down_left": "(!q.block_state('custom:west') || !q.block_state('custom:north') || !q.block_state('custom:west_north')) && !q.block_state('custom:up')",
+// Down
+          "d_up": "!q.block_state('custom:south') && !q.block_state('custom:down')",
+          "d_down": "!q.block_state('custom:north') && !q.block_state('custom:down')",
+          "d_left": "!q.block_state('custom:west') && !q.block_state('custom:down')",
+          "d_right": "!q.block_state('custom:east') && !q.block_state('custom:down')",
+          "d_up_right": "(!q.block_state('custom:east') || !q.block_state('custom:south') || !q.block_state('custom:east_south')) && !q.block_state('custom:down')",
+          "d_up_left": "(!q.block_state('custom:west') || !q.block_state('custom:south') || !q.block_state('custom:south_west')) && !q.block_state('custom:down')",
+          "d_down_right": "(!q.block_state('custom:east') || !q.block_state('custom:north') || !q.block_state('custom:north_east')) && !q.block_state('custom:down')",
+          "d_down_left": "(!q.block_state('custom:west') || !q.block_state('custom:north') || !q.block_state('custom:west_north')) && !q.block_state('custom:down')"
+        }
+      }
+    }
+  }
+}

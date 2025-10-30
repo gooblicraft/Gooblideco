@@ -1,0 +1,212 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:gd_door2_red",
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:placed": [
+                    false,
+                    true
+                ],
+                "goobli:mirror": [
+                    false,
+                    true
+                ],
+                "goobli:is_open": [
+                    false,
+                    true
+                ],
+                "goobli:door_type": [
+                    "top",
+                    "middle",
+                    "bottom",
+                    "bottom_2"
+                ]
+            },
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('goobli:mirror')) || (q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('goobli:mirror'))) && q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ],
+                        "translation": [
+                            0.875,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('goobli:mirror')) || (q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('goobli:mirror'))) && q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ],
+                        "translation": [
+                            -0.875,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('goobli:mirror')) || (q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('goobli:mirror'))) && q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ],
+                        "translation": [
+                            0,
+                            0,
+                            -0.875
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "((q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('goobli:mirror')) || (q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('goobli:mirror'))) && q.block_state('goobli:is_open')",
+                "components": {
+                    "minecraft:transformation": {
+                        "translation": [
+                            0,
+                            0,
+                            0.875
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:placed')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_door2",
+                        "bone_visibility": {
+                            "top": "q.block_state('goobli:door_type') == 'top'",
+                            "middle": "q.block_state('goobli:door_type') == 'middle'",
+                            "bottom": "q.block_state('goobli:door_type') == 'bottom' || q.block_state('goobli:door_type') == 'bottom_2'"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:mirror')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.gd_door2_mirror",
+                        "bone_visibility": {
+                            "top": "q.block_state('goobli:door_type') == 'top'",
+                            "middle": "q.block_state('goobli:door_type') == 'middle'",
+                            "bottom": "q.block_state('goobli:door_type') == 'bottom' || q.block_state('goobli:door_type') == 'bottom_2'"
+                        }
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "door2_red_mirror",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:display_name": "Door 2 Red%\n",
+            "minecraft:geometry": "geometry.gd_door2",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "door2_red",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    2
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    2
+                ]
+            },
+            "tag:door_custom": {},
+            "tag:wooden_door": {},
+            "minecraft:custom_components": [
+                "goobli:door_interact",
+                "goobli:door_place",
+                "goobli:door_destroy"
+            ]
+        }
+    }
+}

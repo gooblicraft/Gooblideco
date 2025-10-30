@@ -1,0 +1,169 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:window6_black",
+            "menu_category": {
+                "category": "construction"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "gd:top": [
+                    0,
+                    1
+                ],
+                "gd:bottom": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('gd:bottom') && !q.block_state('gd:top'))",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.glass_pane_v",
+                        "bone_visibility": {
+                            "single": false,
+                            "top": true,
+                            "mid": false,
+                            "bot": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(q.block_state('gd:bottom') && q.block_state('gd:top'))",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.glass_pane_v",
+                        "bone_visibility": {
+                            "single": false,
+                            "top": false,
+                            "mid": true,
+                            "bot": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "(!q.block_state('gd:bottom') && q.block_state('gd:top'))",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.glass_pane_v",
+                        "bone_visibility": {
+                            "single": false,
+                            "top": false,
+                            "mid": false,
+                            "bot": true
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:window6_black": {},
+            "minecraft:display_name": "Window 6 Black §7(Vertical Connected)§7",
+            "minecraft:geometry": {
+                "identifier": "geometry.glass_pane_v",
+                "bone_visibility": {
+                    "single": true,
+                    "top": false,
+                    "mid": false,
+                    "bot": false
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "gd_window6_black",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -2
+                ],
+                "size": [
+                    16,
+                    16,
+                    4
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -2
+                ],
+                "size": [
+                    16,
+                    16,
+                    4
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "gd:vertical_connected",
+                "gd:vertical_destroy"
+            ]
+        }
+    }
+}

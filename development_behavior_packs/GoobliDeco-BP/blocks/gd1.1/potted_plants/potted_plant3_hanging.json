@@ -1,0 +1,172 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:potted_plant3_hanging",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:variant": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('goobli:variant') == 0",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.potted_plant3_h",
+                        "bone_visibility": {
+                            "out": true,
+                            "left": false,
+                            "right": false,
+                            "hanging": true
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 1",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.potted_plant3_h",
+                        "bone_visibility": {
+                            "out": false,
+                            "left": true,
+                            "right": false,
+                            "hanging": true
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('goobli:variant') == 2",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.potted_plant3_h",
+                        "bone_visibility": {
+                            "out": false,
+                            "left": false,
+                            "right": true,
+                            "hanging": true
+                        }
+                    },
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "tag:potted_plant3_hanging": {},
+            "minecraft:display_name": "Potted Plant Hanging\n",
+            "minecraft:geometry": "geometry.potted_plant3_h",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "potted_plant3",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "goobli:change3"
+            ]
+        }
+    }
+}
