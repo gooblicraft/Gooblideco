@@ -1,0 +1,136 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:test1x3_h",
+            "menu_category": {
+                "category": "construction"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:block_state": [1, 2, 3]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('goobli:block_state') == 1",
+                "components": {
+                    "minecraft:geometry": "geometry.goobli_chair2_main"
+                }
+            },
+            {
+                "condition": "query.block_state('goobli:block_state') == 2",
+                "components": {
+                    "minecraft:geometry": "geometry.goobli_chair2_left"
+                }
+            },
+            {
+            "condition": "query.block_state('goobli:block_state') == 3",
+            "components": {
+                "minecraft:geometry": "geometry.goobli_chair2_right"
+                }
+            }
+        ],
+        "components": {
+            "minecraft:display_name": "Test 1x3",
+            "minecraft:geometry": "geometry.gd1_block2_base",
+            "minecraft:material_instances": {
+				"chair2_base": {
+					"texture": "chair2_oak_base",
+					"render_method": "alpha_test"
+				},
+				"chair2_top": {
+					"texture": "chair2_oak_top",
+					"render_method": "alpha_test"
+				},
+				"*": {
+					"texture": "chair2_oak_base",
+					"render_method": "alpha_test"
+				}
+			},
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+				"goobli:place1x3_h"
+			]
+        }
+    }
+}
