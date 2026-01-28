@@ -1,0 +1,96 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "gooblideco:example_2x2_vertical",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "goobli:block_states": [
+                    "bot_left",
+                    "bot_right",
+                    "top_left",
+                    "top_right"
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, 180, 0]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, 0, 0]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, 90, 0]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, -90, 0]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:display_name": "Example 2x2 Vertical Block",
+            "minecraft:geometry": {
+                "identifier": "geometry.example_2x2_vertical",
+                "bone_visibility": {
+                    "bot_left": "q.block_state('goobli:block_states') == 'bot_left'",
+                    "bot_right": "q.block_state('goobli:block_states') == 'bot_right'",
+                    "top_left": "q.block_state('goobli:block_states') == 'top_left'",
+                    "top_right": "q.block_state('goobli:block_states') == 'top_right'"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "example_2x2_vertical",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.example_2x2_vertical_item",
+                "material_instances": {
+                    "*": {
+                        "texture": "example_2x2_vertical"
+                    }
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 32, 16]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:custom_components": [
+                "goobli:place2x2_v"
+            ]
+        }
+    }
+}
