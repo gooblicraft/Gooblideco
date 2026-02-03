@@ -1,10 +1,10 @@
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
-            "identifier": "gooblideco:test1x3",
+            "identifier": "gooblideco:1by3_v",
             "menu_category": {
-                "category": "construction"
+                "category": "items"
             },
             "traits": {
                 "minecraft:placement_direction": {
@@ -14,123 +14,71 @@
                 }
             },
             "states": {
-                "goobli:block_state": [1, 2, 3]
+                "goobli:block_states": [
+                    "bottom",
+                    "middle",
+                    "top"
+                ]
             }
         },
         "permutations": [
             {
                 "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
                 "components": {
-                    "minecraft:transformation": {
-                        "rotation": [
-                            0,
-                            180,
-                            0
-                        ]
-                    }
+                    "minecraft:transformation": { "rotation": [ 0, 180, 0 ] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
                 "components": {
-                    "minecraft:transformation": {
-                        "rotation": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
+                    "minecraft:transformation": { "rotation": [ 0, 0, 0 ] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
                 "components": {
-                    "minecraft:transformation": {
-                        "rotation": [
-                            0,
-                            90,
-                            0
-                        ]
-                    }
+                    "minecraft:transformation": { "rotation": [ 0, 90, 0 ] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
                 "components": {
-                    "minecraft:transformation": {
-                        "rotation": [
-                            0,
-                            -90,
-                            0
-                        ]
-                    }
-                }
-            },
-            {
-                "condition": "query.block_state('goobli:block_state') == 1",
-                "components": {
-                    "minecraft:geometry": "geometry.goobli_chair2_main"
-                }
-            },
-            {
-                "condition": "query.block_state('goobli:block_state') == 2",
-                "components": {
-                    "minecraft:geometry": "geometry.goobli_chair2_left"
-                }
-            },
-            {
-            "condition": "query.block_state('goobli:block_state') == 3",
-            "components": {
-                "minecraft:geometry": "geometry.goobli_chair2_right"
+                    "minecraft:transformation": { "rotation": [ 0, -90, 0 ] }
                 }
             }
         ],
         "components": {
-            "minecraft:display_name": "Test 1x3",
-            "minecraft:geometry": "geometry.gd1_block2_base",
-            "minecraft:material_instances": {
-				"chair2_base": {
-					"texture": "chair2_acacia_base",
-					"render_method": "alpha_test"
-				},
-				"chair2_top": {
-					"texture": "chair2_acacia_top",
-					"render_method": "alpha_test"
-				},
-				"*": {
-					"texture": "chair2_acacia_base",
-					"render_method": "alpha_test"
-				}
-			},
-            "minecraft:collision_box": {
-                "origin": [
-                    -8,
-                    0,
-                    -8
-                ],
-                "size": [
-                    16,
-                    16,
-                    16
-                ]
+            "minecraft:display_name": "Vertical 1x3 Block",
+            "minecraft:geometry": {
+                "identifier": "geometry.tindahan_banner1",
+                "bone_visibility": {
+                    "bottom": "q.block_state('goobli:block_states') == 'bottom'",
+                    "middle": "q.block_state('goobli:block_states') == 'middle'",
+                    "top": "q.block_state('goobli:block_states') == 'top'"
+                }
             },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "tindahan_banner1",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.tindahan_banner1_item",
+                "material_instances": {
+                    "*": { "texture": "tindahan_banner1" }
+                }
+            },
+            "minecraft:collision_box": false,
             "minecraft:selection_box": {
-                "origin": [
-                    -8,
-                    0,
-                    -8
-                ],
-                "size": [
-                    16,
-                    16,
-                    16
-                ]
+                "origin": [ -8, 0, -8 ],
+                "size": [ 16, 16, 16 ]
             },
             "minecraft:light_dampening": 0,
             "minecraft:light_emission": 0,
             "minecraft:custom_components": [
-				"goobli:place1x3_v"
-			]
+                "goobli:place1x3_v"
+            ]
         }
     }
 }
