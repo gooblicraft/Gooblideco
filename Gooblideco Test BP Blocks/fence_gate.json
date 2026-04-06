@@ -1,0 +1,127 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "gooblideco:fence_gate",
+			"menu_category": {
+				"category": "items"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"goobli:variant": [0,1]
+			}
+		},
+		"components": {
+			"minecraft:display_name": "Fence Gate by Goobli",
+			"minecraft:geometry": {
+          "identifier": "geometry.fence_gate_model",
+          "bone_visibility": {
+              "close": true,
+              "open": false
+        }
+      },
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "fence_gate_texture",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [-6, 2, 7],
+				"size": [12, 13, 1]
+			},
+			"minecraft:selection_box": {
+				"origin": [-6, 2, 7],
+				"size": [12, 13, 1]
+			},
+			"minecraft:custom_components": [
+				"goobli:change2"
+			]
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('goobli:variant') == 0",
+				"components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.fence_gate_model",
+            "bone_visibility": {
+                "close": true,
+                "open": false
+            }
+          },
+					"minecraft:collision_box": {
+						"origin": [-6, 2, 7],
+						"size": [12, 24, 1]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('goobli:variant') == 1",
+				"components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.fence_gate_model",
+            "bone_visibility": {
+                "close": true,
+                "open": false
+            }
+          },
+					"minecraft:collision_box": false
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}
